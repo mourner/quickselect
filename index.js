@@ -1,12 +1,8 @@
 'use strict';
 
-module.exports = partialSort;
+module.exports = quickselect;
 
-// Floyd-Rivest selection algorithm:
-// Rearrange items so that all items in the [left, k] range are smaller than all items in (k, right];
-// The k-th element will have the (k - left + 1)th smallest value in [left, right]
-
-function partialSort(arr, k, left, right, compare) {
+function quickselect(arr, k, left, right, compare) {
     left = left || 0;
     right = right || (arr.length - 1);
     compare = compare || defaultCompare;
@@ -20,7 +16,7 @@ function partialSort(arr, k, left, right, compare) {
             var sd = 0.5 * Math.sqrt(z * s * (n - s) / n) * (m - n / 2 < 0 ? -1 : 1);
             var newLeft = Math.max(left, Math.floor(k - m * s / n + sd));
             var newRight = Math.min(right, Math.floor(k + (n - m) * s / n + sd));
-            partialSort(arr, k, newLeft, newRight, compare);
+            quickselect(arr, k, newLeft, newRight, compare);
         }
 
         var t = arr[k];
