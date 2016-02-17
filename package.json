@@ -13,7 +13,7 @@
     "pretest": "eslint index.js test.js",
     "test": "tape test.js"
   },
-  "keywords": [],
+  "keywords": ["selection", "algorithm", "quickselect", "sort", "partial", "floyd", "rivest"],
   "author": "Vladimir Agafonkin",
   "license": "ISC"
 }
