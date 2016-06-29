@@ -1,11 +1,10 @@
 'use strict';
 
-module.exports = quickselect;
+module.exports = function (arr, k, left, right, compare) {
+    quickselect(arr, k, left || 0, right || (arr.length - 1), compare || defaultCompare);
+};
 
 function quickselect(arr, k, left, right, compare) {
-    left = left || 0;
-    right = right || (arr.length - 1);
-    compare = compare || defaultCompare;
 
     while (right > left) {
         if (right - left > 600) {
