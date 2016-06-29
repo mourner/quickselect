@@ -3,9 +3,6 @@
 module.exports = quickselect;
 
 function quickselect(arr, k, left, right, compare) {
-    left = left || 0;
-    right = right || (arr.length - 1);
-    compare = compare || defaultCompare;
 
     while (right > left) {
         if (right - left > 600) {
