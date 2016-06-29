@@ -1,4 +1,4 @@
-## quickselect
+## quickselect [![Build Status](https://travis-ci.org/mourner/quickselect.svg?branch=master)](https://travis-ci.org/mourner/quickselect)
 
 A tiny and fast [selection algorithm](https://en.wikipedia.org/wiki/Selection_algorithm) in JavaScript
 (specifically, [Floyd-Rivest selection](https://en.wikipedia.org/wiki/Floyd%E2%80%93Rivest_algorithm)).
