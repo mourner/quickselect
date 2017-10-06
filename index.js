@@ -1,13 +1,13 @@
 'use strict';
 
-module.exports = main;
-module.exports.default = main;
-
-function main(arr, k, left, right, compare) {
-    quickselect(arr, k, left || 0, right || (arr.length - 1), compare || defaultCompare);
-};
+module.exports = quickselect;
+module.exports.default = quickselect;
 
 function quickselect(arr, k, left, right, compare) {
+    quickselectStep(arr, k, left || 0, right || (arr.length - 1), compare || defaultCompare);
+};
+
+function quickselectStep(arr, k, left, right, compare) {
 
     while (right > left) {
         if (right - left > 600) {
