@@ -16,7 +16,7 @@ test('selection', function (t) {
 			['14','1','12', '3','4',
 			  '9','6', '8','11','5',
 			  '2','0','10','13','7'],
-	    indices = quickselect(arr, 8);
+	    indices = quickselect(arr, 8, null, null, null, true);
     
     t.deepEqual(arr, result);
     t.deepEqual(indices, expectedIndices);
