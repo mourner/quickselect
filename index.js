@@ -4,10 +4,12 @@ module.exports = quickselect;
 module.exports.default = quickselect;
 
 function quickselect(arr, k, left, right, compare) {
-    quickselectStep(arr, k, left || 0, right || (arr.length - 1), compare || defaultCompare);
-};
+    var indices = Object.keys(arr);
+	quickselectStep(arr, k, left || 0, right || (arr.length - 1), compare || defaultCompare, indices);
+	return indices;
+}
 
-function quickselectStep(arr, k, left, right, compare) {
+function quickselectStep(arr, k, left, right, compare, indices) {
 
     while (right > left) {
         if (right - left > 600) {
@@ -25,21 +27,21 @@ function quickselectStep(arr, k, left, right, compare) {
         var i = left;
         var j = right;
 
-        swap(arr, left, k);
-        if (compare(arr[right], t) > 0) swap(arr, left, right);
+        swap(arr, indices, left, k);
+        if (compare(arr[right], t) > 0) swap(arr, indices, left, right);
 
         while (i < j) {
-            swap(arr, i, j);
+            swap(arr, indices, i, j);
             i++;
             j--;
             while (compare(arr[i], t) < 0) i++;
             while (compare(arr[j], t) > 0) j--;
         }
 
-        if (compare(arr[left], t) === 0) swap(arr, left, j);
+        if (compare(arr[left], t) === 0) swap(arr, indices, left, j);
         else {
             j++;
-            swap(arr, j, right);
+            swap(arr, indices, j, right);
         }
 
         if (j <= k) left = j + 1;
@@ -47,10 +49,13 @@ function quickselectStep(arr, k, left, right, compare) {
     }
 }
 
-function swap(arr, i, j) {
+function swap(arr, ind, i, j) {
     var tmp = arr[i];
     arr[i] = arr[j];
     arr[j] = tmp;
+    tmp = ind[i];
+	ind[i] = ind[j];
+	ind[j] = tmp;
 }
 
 function defaultCompare(a, b) {
