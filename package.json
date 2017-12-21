@@ -1,6 +1,6 @@
 {
   "name": "quickselect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tiny and fast selection algorithm in JavaScript.",
   "main": "index.js",
   "dependencies": {},
@@ -13,7 +13,15 @@
     "pretest": "eslint index.js test.js",
     "test": "tape test.js"
   },
-  "keywords": ["selection", "algorithm", "quickselect", "sort", "partial", "floyd", "rivest"],
+  "keywords": [
+    "selection",
+    "algorithm",
+    "quickselect",
+    "sort",
+    "partial",
+    "floyd",
+    "rivest"
+  ],
   "author": "Vladimir Agafonkin",
   "license": "ISC"
 }
