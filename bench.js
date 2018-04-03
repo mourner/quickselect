@@ -1,6 +1,5 @@
-'use strict';
 
-var quickselect = require('./');
+import quickselect from './';
 
 var N = 10000000;
 var arr = [];

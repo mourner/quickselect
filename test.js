@@ -1,7 +1,6 @@
-'use strict';
 
-var test = require('tape').test;
-var quickselect = require('./');
+import test from 'tape';
+import quickselect from './';
 
 test('selection', function (t) {
     var arr = [65, 28, 59, 33, 21, 56, 22, 95, 50, 12, 90, 53, 28, 77, 39];
