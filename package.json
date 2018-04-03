@@ -5,9 +5,12 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^2.1.0",
-    "eslint-config-mourner": "^2.0.0",
-    "tape": "^4.4.0"
+    "eslint": "^4.19.1",
+    "eslint-config-mourner": "^2.0.3",
+    "tape": "^4.9.0"
+  },
+  "eslintConfig": {
+    "extends": "mourner"
   },
   "scripts": {
     "pretest": "eslint index.js test.js",

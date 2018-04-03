@@ -5,7 +5,7 @@ module.exports.default = quickselect;
 
 function quickselect(arr, k, left, right, compare) {
     quickselectStep(arr, k, left || 0, right || (arr.length - 1), compare || defaultCompare);
-};
+}
 
 function quickselectStep(arr, k, left, right, compare) {
 
