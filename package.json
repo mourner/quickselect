@@ -2,7 +2,6 @@
   "name": "quickselect",
   "version": "1.1.0",
   "description": "A tiny and fast selection algorithm in JavaScript.",
-  "module": "index.js",
   "main": "quickselect.js",
   "dependencies": {},
   "devDependencies": {
