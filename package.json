@@ -28,8 +28,10 @@
   },
   "files": [
     "index.js",
+    "index.d.ts",
     "quickselect.js"
   ],
+  "types": "index.d.ts",
   "keywords": [
     "selection",
     "algorithm",
