@@ -1,4 +1,4 @@
-## quickselect
+## quickselect [![Node](https://github.com/mourner/quickselect/actions/workflows/node.yml/badge.svg)](https://github.com/mourner/quickselect/actions/workflows/node.yml) [![Simply Awesome](https://img.shields.io/badge/simply-awesome-brightgreen.svg)](https://github.com/mourner/projects)
 
 A tiny and fast [selection algorithm](https://en.wikipedia.org/wiki/Selection_algorithm) in JavaScript
 (specifically, [Floyd-Rivest selection](https://en.wikipedia.org/wiki/Floyd%E2%80%93Rivest_algorithm)).
