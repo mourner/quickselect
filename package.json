@@ -1,35 +1,28 @@
 {
   "name": "quickselect",
   "version": "2.0.0",
+  "type": "module",
   "description": "A tiny and fast selection algorithm in JavaScript.",
   "repository": "github:mourner/quickselect",
   "module": "index.js",
-  "main": "quickselect.js",
-  "dependencies": {},
+  "main": "index.js",
+  "exports": "./index.js",
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-mourner": "^2.0.3",
-    "esm": "^3.0.15",
-    "rollup": "^0.57.1",
-    "tape": "^4.9.0"
-  },
-  "eslintConfig": {
-    "extends": "mourner",
-    "parserOptions": {
-      "sourceType": "module"
-    }
+    "eslint": "^9.6.0",
+    "eslint-config-mourner": "^4.0.1",
+    "esm": "^3.2.25",
+    "rollup": "^4.18.0",
+    "tape": "^5.8.1",
+    "typescript": "^5.5.3"
   },
   "scripts": {
-    "pretest": "eslint index.js test.js bench.js",
-    "test": "node -r esm test.js",
-    "bench": "node -r esm bench.js",
-    "build": "rollup -c",
-    "prepublishOnly": "npm run build"
+    "pretest": "eslint *.js && tsc",
+    "test": "node test.js",
+    "bench": "node bench.js"
   },
   "files": [
     "index.js",
-    "index.d.ts",
-    "quickselect.js"
+    "index.d.ts"
   ],
   "types": "index.d.ts",
   "keywords": [
